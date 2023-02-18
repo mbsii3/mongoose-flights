@@ -11,6 +11,7 @@ const destinationSchema = new Schema({
     }
 });
 
+
 const flightSchema = new Schema({
     airline: {
         type: String,
@@ -33,7 +34,7 @@ const flightSchema = new Schema({
         max: '2025-01-01',
         default: '2024-02-18'
     },
-    destination: [destinationSchema]
+    destinations: [destinationSchema]
 }, {
     timestamps: true
 });
