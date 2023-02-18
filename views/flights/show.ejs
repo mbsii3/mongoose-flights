@@ -1,8 +1,31 @@
 <%- include('../partials/header') %>
 
+<section id="detail-page">
+    <div>Airline: </div>
+    <div><%= flight.airline %></div>
+    <div>Airport: </div>
+    <div><%= flight.airport %></div>
+    <div>Flight Number:</div>
+    <div><%= flight.flightNo %></div>
+    <div>Departs: </div>
+    <div><%= flight.departs %></div>
+</section>
 
-
-
+<br>
+<br>
+<h2>Flight Destinations</h2>
+<form action="/flights/<%= flight._id %>" method="POST" id="add-destination-form">Destinations</form>
+    <label>Airport:</label>
+    <select name="airport">
+        <option value="DFW">DFW</option>
+        <option value="ORD">ORD</option>
+        <option value="LAX">LAX</option>
+        <option value="JFK">JFK</option>
+        <option value="ATL">ATL</option>
+    </select>
+    <label>Arrival:</label>
+    <input type="date" name="arrival">
+    <button type="submit">Add Destination</button>
 
 
 <%- include('../partials/footer') %>
