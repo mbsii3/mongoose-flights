@@ -7,10 +7,10 @@ const destinationSchema = new Schema({
         enum: ['DFW', 'ORD', 'LAX', 'JFK', 'ATL']
     },
     arrival: {
-        type: Date
+        type: Date,
+        default: '02-22-2023'
     }
 });
-
 
 const flightSchema = new Schema({
     airline: {
@@ -30,9 +30,9 @@ const flightSchema = new Schema({
     },
     departs: {
         type: Date,
-        min: '2023-02-18',
-        max: '2025-01-01',
-        default: '2024-02-18'
+        min: '02-22-2023',
+        max: '01-01-2024',
+        default: '02-22-2023'
     },
     destinations: [destinationSchema]
 }, {
